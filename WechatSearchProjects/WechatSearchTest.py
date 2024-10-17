@@ -3,7 +3,15 @@
 
 import sys
 import re
-import urllib, urllib2
+'''
+通过pip3 install urllib2也会提示找不到包。
+所以需要install urllib.request和install urllib.error 两个包,
+然后将builtwith包中的import urllib2修改为import urllib.request 
+和import urllib.error。
+'''
+import urllib
+import urllib.request
+import urllib.error
 import requests
 import pymongo
 import datetime
@@ -95,7 +103,7 @@ def func(tuple):
 
     for item in titleurl:
         url = item["link"]
-        print "url:", url
+        print("url:", url)
         content = GetContent(url)
         item["content"] = content
         ContentSave(item)
@@ -119,4 +127,4 @@ if __name__ == '__main__':
     #     func(tuple)
 
     end = datetime.datetime.now()
-    print "last time: ", end-start
+    print ("last time: ", end-start)

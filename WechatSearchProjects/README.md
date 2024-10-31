@@ -9,3 +9,6 @@
 * type可以选择
 
 * i的范围可以调整，对应查询的搜索结果页面数目  
+
+具体可以到scrapy官网上查询学习: https://docs.scrapy.org/en/latest/intro/tutorial.html
+目前的wwjtest就是参考scrapy官网的tutorial写的， 使用scrapy crawl wwjtest 运行

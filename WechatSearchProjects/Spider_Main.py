@@ -7,7 +7,6 @@ if __name__ == '__main__':
     spider_name = "wechat"
     results_name = "results/results.json"
     print(project_name)
-    print(os.path)
     if not os.path.exists(project_name):
         print("Please Edit the project files and Run again!!!")
         s = "scrapy startproject %s" % project_name
@@ -19,7 +18,7 @@ if __name__ == '__main__':
         os.chdir(path+"/"+project_name) # 修改当前路径
         if os.path.exists(results_name):
             os.remove(results_name)
-        s = "scrapy crawl %s -o %s -t json" % (spider_name, results_name)
+        s = "scrapy crawl %s" % spider_name
         # s = "scrapy crawl %s -o %s -t json" % (spider_name, results_name)
         print("scrapy cmd:" + s)
         execute(s.split())
